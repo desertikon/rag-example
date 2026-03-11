@@ -1,0 +1,14 @@
+RAG Demo - Sample Document
+
+This is a sample document for testing the RAG (Retrieval-Augmented Generation) demo.
+
+Key concepts:
+- RAG combines retrieval of relevant documents with generative AI to answer questions
+- Documents are split into chunks, embedded as vectors, and stored in a vector database
+- When a user asks a question, similar chunks are retrieved and used as context for the LLM
+- Chroma is a popular open-source vector database for storing embeddings
+
+To use this demo:
+1. Add .txt or .md files to the docs folder
+2. Click "Index documents" to chunk and embed them
+3. Ask questions about the content
