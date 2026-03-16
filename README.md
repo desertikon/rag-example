@@ -47,8 +47,12 @@ Retrieval-Augmented Generation demo with Next.js frontend, NestJS backend, and C
 1. Add `.txt` or `.md` files to `backend/docs/`
 2. Click "Index documents" to chunk and embed them into Chroma
 3. Ask questions about the content
+4. **Voice assistant** — Go to `/voice` for push-to-talk. Uses Web Speech API (STT + TTS). Optionally enable Edge TTS for better voice quality.
 
 ## Endpoints
 
 - `POST /index` — Index documents from `docs/` folder
 - `POST /ask` — Body: `{ "question": "...", "topK": 4 }` — Ask a question with RAG
+- `POST /ask-stream` — Same as ask but streams response (SSE)
+- `POST /ask-tools` — LLM with function calling (e.g. get_current_time)
+- `POST /tts` — Body: `{ "text": "..." }` — Text-to-speech via Edge TTS (returns audio/webm)
